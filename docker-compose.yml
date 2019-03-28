@@ -3,4 +3,12 @@ services:
   nginx:
     build: .
     ports:
-     - "80:80"
+      - "80:80"
+    networks:
+      - nginx_with_others
+    external_links:
+      - wordpress
+
+networks:
+  nginx_with_others:
+    external: true
