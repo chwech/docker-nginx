@@ -8,6 +8,8 @@ services:
     networks:
       - default
       - nginx_with_others
+    volumes:
+      - "/home/chwech/docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro"
       
 networks:
   nginx_with_others:
