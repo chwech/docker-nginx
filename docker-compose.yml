@@ -9,7 +9,8 @@ services:
       - default
       - nginx_with_others
     volumes:
-      - "/home/chwech/docker/nginx/nginx.conf:/etc/nginx/conf.d"      
+      - "/home/chwech/docker/nginx/nginx.conf:/etc/nginx/conf.d"
+      - "/home/chwech/docker/nginx/static:/static"      
 networks:
   nginx_with_others:
     external: true
